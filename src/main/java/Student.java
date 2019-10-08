@@ -6,6 +6,7 @@ public class Student {
     private String name;
     private ArrayList<Integer> grades;
 
+
     public Student(long studentID, String studentName) {
         this.id = studentID;
         this.name = studentName;
@@ -24,6 +25,7 @@ public class Student {
         return this.grades;
     }
 
+
     public void addGrade(int newGrade) {
         this.grades.add(newGrade);
     }
@@ -35,6 +37,4 @@ public class Student {
         }
         return (double) total / this.grades.size();
     }
-
-
 }
