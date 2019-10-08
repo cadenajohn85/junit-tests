@@ -11,7 +11,11 @@ public class StudentTest {
         assertTrue(1 + 2 == 3);
     }
 
-//    The Student class should have a constructor that sets both the name and id property, it initializes the grades property as an empty ArrayList.
+    @Test
+    public void testIfStudentCanBeCreated() {
+        Student student = new Student(5L, "John");
+        assertNotNull(student);
+    }
 
     @Before
     public void setUp() {
@@ -21,7 +25,7 @@ public class StudentTest {
     @Test
     public void testStudentFields() {
         assertEquals(1L, testStudent.getId());
-        assertNotEquals(2l, testStudent.getId());
+        assertNotEquals(2L, testStudent.getId());
         assertEquals("Gary Green", testStudent.getName());
         assertNotEquals("Will White", testStudent.getName());
         assertEquals(0, testStudent.getGrades().size());
