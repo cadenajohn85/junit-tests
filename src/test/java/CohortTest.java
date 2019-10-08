@@ -58,6 +58,14 @@ public class CohortTest {
         assertEquals(75, manyStudentsCohort.getCohortAverage(), 0);
     }
 
+//    Follow the TDD cycle and create a new feature to find students by their ID like: findStudentById(long id) in the Cohort class, remember to create the tests first before any production code.
+
+    @Test
+    public void testFindStudentById() {
+        assertSame("John", oneStudentCohort.findStudentById(1));
+        assertSame("James", manyStudentsCohort.findStudentById(2));
+    }
+
 
 
 
